@@ -1,0 +1,16 @@
+{
+  "name": "fastify-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "^3.5.1",
+    "fastify-compress": "^3.3.1",
+    "fastify-plugin": "^2.3.4"
+  }
+}
