@@ -1,6 +1,9 @@
-const path = require('path');
+import * as path from 'path';
+import * as webpack from 'webpack';
+// @ts-ignore
+import NodemonPlugin from 'nodemon-webpack-plugin';
 
-module.exports = {
+const config: webpack.Configuration = {
   entry: './index.ts',
   mode: 'development',
   output: {
@@ -26,5 +29,10 @@ module.exports = {
       'tiny-lru': 'tiny-lru/lib/tiny-lru.cjs.js',
     }
   },
-  target: 'node',
+  target: 'node14',
+  plugins: [
+    new NodemonPlugin({ nodeArgs: ['--inspect=0.0.0.0'] }),
+  ],
 };
+
+export default config;
